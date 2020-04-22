@@ -1,5 +1,6 @@
 import React from 'react';
 import getDataFromApi from '../service/api';
+import List from './List';
 import '../stylesheets/App.css';
 
 class App extends React.Component {
@@ -27,7 +28,7 @@ class App extends React.Component {
   render() {
     console.log(this.state);
 
-    return <div></div>;
+    return <List info={this.state} />;
   }
 }
 
