@@ -1,5 +1,6 @@
 import React from 'react';
 import ItemList from './ItemList';
+import PropTypes from 'prop-types';
 
 const List = (props) => {
   console.log(props.info.characters);
@@ -13,3 +14,7 @@ const List = (props) => {
   return <ul className='list'>{items}</ul>;
 };
 export default List;
+
+ItemList.propTypes = {
+  info: PropTypes.array,
+};
