@@ -10,9 +10,11 @@ class App extends React.Component {
     super(props);
     this.state = {
       characters: [],
+      nameFilter: '',
     };
     this.getDataFromApi = this.getDataFromApi.bind(this);
     this.handleFilter = this.handleFilter.bind(this);
+    this.filteredCharacters = this.filteredCharacters.bind(this);
   }
 
   //traer los datos de la api
@@ -29,12 +31,17 @@ class App extends React.Component {
 
   //manejar el filtro
   handleFilter(data) {
-    console.log('app', data);
+    this.setState({ nameFilter: data.value });
+  }
+
+  filteredCharacters() {
+    this.state.characters.filter((character) => {
+      return character.name.includes(this.state.nameFilter);
+    });
   }
 
   render() {
-    console.log(this.state);
-
+    console.log(this.filteredCharacters());
     return (
       <div>
         <img className='logo' src={Logo} alt='rick and morty logo' />

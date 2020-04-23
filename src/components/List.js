@@ -3,7 +3,7 @@ import ItemList from './ItemList';
 import PropTypes from 'prop-types';
 
 const List = (props) => {
-  console.log(props.info.characters);
+  console.log(props.info);
   const items = props.info.characters.map((item) => {
     return (
       <li className='itemList' key={item.id}>
@@ -16,5 +16,5 @@ const List = (props) => {
 export default List;
 
 ItemList.propTypes = {
-  info: PropTypes.array,
+  info: PropTypes.object,
 };
