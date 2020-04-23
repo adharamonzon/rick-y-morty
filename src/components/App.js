@@ -1,7 +1,8 @@
 import React from 'react';
-import getDataFromApi from '../service/api';
-import List from './List';
 import Logo from '../stylesheets/images/rickandmorty.png';
+import getDataFromApi from '../service/api';
+import CharacterList from './CharacterList';
+import CharacterDetail from './CharacterDetail';
 import FilterByName from './FIlterByName';
 import '../stylesheets/App.scss';
 
@@ -46,7 +47,8 @@ class App extends React.Component {
       <div>
         <img className='logo' src={Logo} alt='rick and morty logo' />
         <FilterByName handleFilter={this.handleFilter} />
-        <List characters={this.filteredCharacters()} />
+        <CharacterList characters={this.filteredCharacters()} />
+        <CharacterDetail characters={this.state.characters} />
       </div>
     );
   }

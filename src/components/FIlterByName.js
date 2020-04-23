@@ -6,7 +6,6 @@ const FilterByName = (props) => {
     console.log(ev.target.value);
     props.handleFilter({
       value: ev.target.value,
-      key: 'name',
     });
   };
 

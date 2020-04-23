@@ -1,20 +1,19 @@
 import React from 'react';
-import ItemList from './ItemList';
+import CharacterCard from './CharacterCard';
 import PropTypes from 'prop-types';
 
-const List = (props) => {
-  console.log(props);
+const CharacterList = (props) => {
   const items = props.characters.map((item) => {
     return (
       <li className='itemList' key={item.id}>
-        <ItemList info={item} />
+        <CharacterCard character={item} />
       </li>
     );
   });
   return <ul className='list'>{items}</ul>;
 };
-export default List;
+export default CharacterList;
 
-ItemList.propTypes = {
-  info: PropTypes.object,
+CharacterList.propTypes = {
+  characters: PropTypes.array,
 };
