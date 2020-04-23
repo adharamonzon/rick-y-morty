@@ -1,14 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const CharacterCard = (props) => {
   return (
     <div>
-      <div className='text-container'>
-        <h1 className='title'>{props.character.name}</h1>
-        <h3 className='espices'>{props.character.species}</h3>
-      </div>
-      <img className='img' src={props.character.image} alt={`foto de ${props.character.name}`} />
+      <Link to={`/character/${props.character.id}`}>
+        <img className='img' src={props.character.image} alt={`foto de ${props.character.name}`} />
+        <div className='text-container'>
+          <h1 className='title'>{props.character.name}</h1>
+          <h3 className='espices'>{props.character.species}</h3>
+        </div>
+      </Link>
     </div>
   );
 };

@@ -1,24 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const CharacterDetail = (props) => {
-  console.log(props.characters);
+  console.log(props.character);
 
   return (
     <div>
-      <img className='img' src={props.characters.image} alt={`foto de ${props.characters.name}`} />
+      <img className='img' src={props.character.image} alt={`foto de ${props.character.name}`} />
       <div className='text-container'>
-        <h1 className='title'>{props.characters.name}</h1>
-        <h3 className='espices'>Especie: {props.characters.species}</h3>
-        <p>origen: </p>
-        <p>episodios:</p>
+        <h1 className='title'>{props.character.name}</h1>
+        <h3 className='espices'>Especie:{props.character.species}</h3>
+        <p>origen: {props.character.origin} </p>
+        <p>Estado: {props.character.status} </p>
+        <p>episodios: {props.character.episodes}</p>
       </div>
     </div>
   );
 };
 export default CharacterDetail;
-/*  CharacterDetail.propTypes = {
-  name: PropTypes.string,
-  species: PropTypes.string,
-  image: PropTypes.string,
-}; */
+
+CharacterDetail.propTypes = {
+  character: PropTypes.object,
+};

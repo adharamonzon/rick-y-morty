@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 import Logo from '../stylesheets/images/rickandmorty.png';
 import getDataFromApi from '../service/api';
 import CharacterList from './CharacterList';
@@ -16,6 +17,7 @@ class App extends React.Component {
     this.getDataFromApi = this.getDataFromApi.bind(this);
     this.handleFilter = this.handleFilter.bind(this);
     this.filteredCharacters = this.filteredCharacters.bind(this);
+    this.renderCharacterDetail = this.renderCharacterDetail.bind(this);
   }
 
   //traer los datos de la api
@@ -41,15 +43,30 @@ class App extends React.Component {
     });
   }
 
+  renderCharacterDetail(props) {
+    debugger;
+    let selectedCharacter = this.state.characters.find((character) => {
+      return character.id === parseInt(props.match.params.id);
+    });
+    console.log(selectedCharacter);
+    return <CharacterDetail character={selectedCharacter} />;
+  }
+
   render() {
-    console.log(this.filteredCharacters());
     return (
       <div>
         <img className='logo' src={Logo} alt='rick and morty logo' />
-        <FilterByName handleFilter={this.handleFilter} />
-        <CharacterList characters={this.filteredCharacters()} />
-        <CharacterDetail characters={this.state.characters} />
+
+        <Switch>
+          <Route path='/'>
+            <FilterByName handleFilter={this.handleFilter} />
+            <CharacterList characters={this.filteredCharacters()} />
+          </Route>
+          <Route path='/character/:id' render={this.renderCharacterDetail} />
+        </Switch>
       </div>
     );
   }
 }
+
+export default App;
