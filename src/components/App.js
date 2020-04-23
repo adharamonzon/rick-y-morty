@@ -35,8 +35,8 @@ class App extends React.Component {
   }
 
   filteredCharacters() {
-    this.state.characters.filter((character) => {
-      return character.name.includes(this.state.nameFilter);
+    return this.state.characters.filter((character) => {
+      return character.name.toUpperCase().includes(this.state.nameFilter.toLocaleUpperCase());
     });
   }
 
@@ -46,7 +46,7 @@ class App extends React.Component {
       <div>
         <img className='logo' src={Logo} alt='rick and morty logo' />
         <FilterByName handleFilter={this.handleFilter} />
-        <List info={this.state} />
+        <List characters={this.filteredCharacters()} />
       </div>
     );
   }
