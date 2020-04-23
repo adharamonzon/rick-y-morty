@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ItemList = (props) => {
-  console.log(props);
-
   return (
     <>
       <div className='text-container'>
