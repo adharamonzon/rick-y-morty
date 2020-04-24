@@ -44,12 +44,14 @@ class App extends React.Component {
   }
 
   renderCharacterDetail(props) {
+    console.log(this.state);
+
     debugger;
     let selectedCharacter = this.state.characters.find((character) => {
       return character.id === parseInt(props.match.params.id);
     });
     console.log(selectedCharacter);
-    return <CharacterDetail character={selectedCharacter} />;
+    return <CharacterDetail selectedCharacter={selectedCharacter} />;
   }
 
   render() {
@@ -58,7 +60,7 @@ class App extends React.Component {
         <img className='logo' src={Logo} alt='rick and morty logo' />
 
         <Switch>
-          <Route path='/'>
+          <Route exact path='/'>
             <FilterByName handleFilter={this.handleFilter} />
             <CharacterList characters={this.filteredCharacters()} />
           </Route>

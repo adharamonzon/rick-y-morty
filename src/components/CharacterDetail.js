@@ -1,19 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const CharacterDetail = (props) => {
-  console.log(props.character);
+  console.log(props.selectedCharacter);
+  debugger;
 
   return (
     <div>
-      <img className='img' src={props.character.image} alt={`foto de ${props.character.name}`} />
+      <img className='img' src={props.selectedCharacter.image} alt={`foto de ${props.selectedCharacter.name}`} />
       <div className='text-container'>
-        <h1 className='title'>{props.character.name}</h1>
-        <h3 className='espices'>Especie:{props.character.species}</h3>
-        <p>origen: {props.character.origin} </p>
-        <p>Estado: {props.character.status} </p>
-        <p>episodios: {props.character.episodes}</p>
+        <h3 className='espices'>Especie:{props.selectedCharacter.species}</h3>
+        <p>origen: {props.selectedCharacter.origin} </p>
+        <p>Estado: {props.selectedCharacter.status} </p>
+        <p>episodios: {props.selectedCharacter.episodes}</p>
       </div>
     </div>
   );
