@@ -1,9 +1,11 @@
 import React from 'react';
 import CharacterCard from './CharacterCard';
 import PropTypes from 'prop-types';
+import swal from 'sweetalert';
 
-const CharacterList = (props) => {
-  const items = props.characters.map((item) => {
+const CharacterList = ({ characters }) => {
+  /*   if (characters > 0) { */
+  const items = characters.map((item) => {
     return (
       <li className='itemList' key={item.id}>
         <CharacterCard character={item} />
@@ -11,7 +13,10 @@ const CharacterList = (props) => {
     );
   });
   return <ul className='list'>{items}</ul>;
-};
+}; /* else {
+    return <p>holi</p>;
+  } */
+/* }; */
 export default CharacterList;
 
 CharacterList.propTypes = {

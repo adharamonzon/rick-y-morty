@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import swal from 'sweetalert';
 
 const FilterByName = (props) => {
   console.log(props);
@@ -13,7 +12,6 @@ const FilterByName = (props) => {
   const handleForm = (ev) => {
     ev.preventDefault();
   };
-  console.log(props.value);
 
   return (
     <form onSubmit={handleForm}>
@@ -27,11 +25,3 @@ export default FilterByName;
 FilterByName.propTypes = {
   handleFilter: PropTypes.func,
 };
-
-/* if (ev.target.value !== '') {
-  
-} else {
-  props.handleFilter({
-    value: ev.target.value,
-  });
-} */
