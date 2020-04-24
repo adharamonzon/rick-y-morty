@@ -44,16 +44,16 @@ class App extends React.Component {
   }
 
   renderCharacterDetail(props) {
-    console.log(this.state);
-
     let selectedCharacter = this.state.characters.find((character) => {
       return character.id === parseInt(props.match.params.id);
     });
     console.log(selectedCharacter);
-    return <CharacterDetail selectedCharacter={selectedCharacter} />;
+    return <CharacterDetail selectedCharacter={selectedCharacter} inputValue={this.state.nameFilter} />;
   }
 
   render() {
+    console.log(this.state);
+
     return (
       <div>
         <img className='logo' src={Logo} alt='rick and morty logo' />
@@ -61,7 +61,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/'>
             <FilterByName handleFilter={this.handleFilter} inputValue={this.state.nameFilter} />
-            <CharacterList characters={this.filteredCharacters()} />
+            <CharacterList characters={this.filteredCharacters()} inputValue={this.state.nameFilter} />
           </Route>
           <Route path='/character/:id' render={this.renderCharacterDetail} />
         </Switch>
