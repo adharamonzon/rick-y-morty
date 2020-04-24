@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Logo from '../stylesheets/images/rickandmorty.png';
 import getDataFromApi from '../service/api';
 import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
@@ -56,8 +55,6 @@ class App extends React.Component {
 
     return (
       <div>
-        <img className='logo' src={Logo} alt='rick and morty logo' />
-
         <Switch>
           <Route exact path='/'>
             <FilterByName handleFilter={this.handleFilter} inputValue={this.state.nameFilter} />

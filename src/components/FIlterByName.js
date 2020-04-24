@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Logo from '../stylesheets/images/rickandmorty.png';
 
 const FilterByName = (props) => {
   console.log(props);
@@ -14,9 +15,15 @@ const FilterByName = (props) => {
   };
 
   return (
-    <form onSubmit={handleForm}>
-      <input type='text' value={props.inputValue} name='name' id='name' placeholder='busca tu personaje favorito' onChange={handleFilter} />
-    </form>
+    <header className='header'>
+      <div>
+        <img className='header--logo' src={Logo} alt='rick and morty logo' />
+      </div>
+      <form className='header--form' onSubmit={handleForm}>
+        <label htmlFor='name'>¡Busca a tu personaje favorito!</label>
+        <input className='header--form__input' type='text' value={props.inputValue} name='name' id='name' placeholder=' escribe aqui...' onChange={handleFilter} />
+      </form>
+    </header>
   );
 };
 
