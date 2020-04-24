@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const CharacterCard = (props) => {
-  console.log(props);
-
   return (
     <div>
       <Link to={`/character/${props.character.id}`}>

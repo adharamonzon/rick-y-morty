@@ -1,15 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import swal from 'sweetalert';
 
 const FilterByName = (props) => {
+  console.log(props);
+
   const handleFilter = (ev) => {
-    console.log(ev.target.value);
     props.handleFilter({
       value: ev.target.value,
     });
   };
+  const handleForm = (ev) => {
+    ev.preventDefault();
+  };
+  console.log(props.value);
 
-  return <input type='text' name='name' id='name' placeholder='busca tu personaje favorito' onChange={handleFilter} />;
+  return (
+    <form onSubmit={handleForm}>
+      <input type='text' value={props.inputValue} name='name' id='name' placeholder='busca tu personaje favorito' onChange={handleFilter} />
+    </form>
+  );
 };
 
 export default FilterByName;
@@ -17,3 +27,11 @@ export default FilterByName;
 FilterByName.propTypes = {
   handleFilter: PropTypes.func,
 };
+
+/* if (ev.target.value !== '') {
+  
+} else {
+  props.handleFilter({
+    value: ev.target.value,
+  });
+} */

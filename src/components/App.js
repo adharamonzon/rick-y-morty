@@ -46,7 +46,6 @@ class App extends React.Component {
   renderCharacterDetail(props) {
     console.log(this.state);
 
-    debugger;
     let selectedCharacter = this.state.characters.find((character) => {
       return character.id === parseInt(props.match.params.id);
     });
@@ -61,7 +60,7 @@ class App extends React.Component {
 
         <Switch>
           <Route exact path='/'>
-            <FilterByName handleFilter={this.handleFilter} />
+            <FilterByName handleFilter={this.handleFilter} inputValue={this.state.nameFilter} />
             <CharacterList characters={this.filteredCharacters()} />
           </Route>
           <Route path='/character/:id' render={this.renderCharacterDetail} />
