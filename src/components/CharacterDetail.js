@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const CharacterDetail = (props) => {
-  console.log(props.selectedCharacter.episodes.length);
   return (
     <div>
+      <Link to='/'>
+        <p>volver</p>
+      </Link>
       <img className='img' src={props.selectedCharacter.image} alt={`foto de ${props.selectedCharacter.name}`} />
       <div className='text-container'>
         <h3 className='espices'>Especie:{props.selectedCharacter.species}</h3>
