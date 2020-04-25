@@ -15,7 +15,7 @@ const CharacterList = (props) => {
     });
     return <ul className='list'>{items}</ul>;
   } else {
-    return <p>No hay ningún personaje que coincida con la palabra: {props.imputValue}</p>;
+    return <p>No hay ningún personaje que coincida con la palabra: {props.inputValue}</p>;
   }
 };
 export default CharacterList;
