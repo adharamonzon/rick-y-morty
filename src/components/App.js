@@ -46,8 +46,9 @@ class App extends React.Component {
     let selectedCharacter = this.state.characters.find((character) => {
       return character.id === parseInt(props.match.params.id);
     });
-    console.log(selectedCharacter);
-    return <CharacterDetail selectedCharacter={selectedCharacter} inputValue={this.state.nameFilter} />;
+    if (selectedCharacter !== undefined) {
+      return <CharacterDetail selectedCharacter={selectedCharacter} inputValue={this.state.nameFilter} />;
+    }
   }
 
   render() {
