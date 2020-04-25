@@ -1,9 +1,3 @@
-.logo {
-  width: 700px;
-  height: 250px;
-  margin-bottom: 50px;
-  margin-top: -35px;
-}
 .header {
   display: flex;
   flex-direction: column;
@@ -47,29 +41,110 @@
       padding-bottom: 10px;
       padding-top: 7px;
       color: black;
-      text-emphasis: none;
     }
     .espices {
-      text-decoration: none;
-      text-emphasis: none;
       color: black;
       padding-bottom: 10px;
     }
     .text-container {
-      background-color: rgb(103, 103, 105);
-      border-radius: 5px;
-      height: 100px;
+      width: 300px;
+      padding-top: 15px;
+      background-color: #a2aeb1;
+      border-radius: 8px;
+      margin-top: -15px;
+      height: 120px;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
     }
     .img {
-      border-radius: 5px;
-
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
       width: 300px;
       height: auto;
     }
+    .link {
+      text-decoration: none;
+    }
   }
 }
-.icon {
+
+.detailCard {
+  width: 500px;
+  position: absolute;
+  left: 30%;
+  top: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--back {
+    border-radius: 20px;
+    border: solid 3px rgb(107, 236, 107);
+    color: black;
+    width: 75px;
+    height: 45px;
+    text-decoration: none;
+    display: flex;
+    margin-bottom: 20px;
+    &__text {
+      align-self: center;
+      padding-left: 9px;
+      font-weight: 600;
+      font-size: 16px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
+    }
+  }
+  &--img {
+    border-radius: 8px;
+  }
+  &--textContainer {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
+    font-size: 14px;
+    margin-top: 20px;
+    background-color: #a2aeb1;
+    width: 300px;
+    margin-top: -5px;
+    padding-top: 15px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    text-align: center;
+    &__espices {
+      margin-bottom: 8px;
+    }
+    &__origen {
+      margin-bottom: 8px;
+    }
+    &__status {
+      margin-bottom: 8px;
+    }
+    &__episodes {
+      margin-bottom: 8px;
+    }
+  }
+}
+.icon-specie {
   width: 25px;
   height: 25px;
+  position: absolute;
+  bottom: 80px;
+}
+.icon-dead {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  bottom: 33px;
+}
+.alive {
+  color: rgb(45, 156, 45);
+  font-weight: 700;
+}
+
+.error-message {
+  font-size: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
+  text-align: center;
+}
+.error {
+  font-weight: bolder;
+}
+
+@media all and (max-width: 320px) {
 }
