@@ -24,5 +24,5 @@ const CharacterDetail = (props) => {
 export default CharacterDetail;
 
 CharacterDetail.propTypes = {
-  character: PropTypes.object,
+  selectedCharacter: PropTypes.object,
 };

@@ -24,4 +24,5 @@ export default CharacterList;
 
 CharacterList.propTypes = {
   characters: PropTypes.array,
+  inputValue: PropTypes.string,
 };

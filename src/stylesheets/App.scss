@@ -47,7 +47,6 @@
       padding-bottom: 10px;
     }
     .text-container {
-      width: 300px;
       padding-top: 15px;
       background-color: #a2aeb1;
       border-radius: 8px;
@@ -55,10 +54,9 @@
       height: 120px;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
     }
-    .img {
+    .imgCard {
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
-      width: 300px;
       height: auto;
     }
     .link {
@@ -163,10 +161,14 @@
     }
   }
   .list {
-    grid-template-columns: 1fr;
+    grid-template-columns: 300px;
     margin-right: 10px;
   }
+  .imgCard {
+    width: 200px;
+  }
   .detailCard {
-    left: 5%;
+    position: relative;
+    left: -118px;
   }
 }
