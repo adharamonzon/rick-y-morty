@@ -4,6 +4,33 @@
   margin-bottom: 50px;
   margin-top: -35px;
 }
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--logo {
+    width: 700px;
+    height: auto;
+    margin-bottom: 50px;
+    margin-top: -60px;
+  }
+  &--form {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
+    font-size: 40px;
+  }
+  &--form__input {
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+    border: solid 4px rgb(107, 236, 107);
+    margin-bottom: 40px;
+    align-self: center;
+    margin-top: 10px;
+  }
+}
+
 .list {
   list-style: none;
   display: grid;
@@ -19,14 +46,24 @@
       font-size: 25px;
       padding-bottom: 10px;
       padding-top: 7px;
+      color: black;
+      text-emphasis: none;
     }
     .espices {
+      text-decoration: none;
+      text-emphasis: none;
+      color: black;
       padding-bottom: 10px;
     }
     .text-container {
       background-color: rgb(103, 103, 105);
+      border-radius: 5px;
+      height: 100px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
     }
     .img {
+      border-radius: 5px;
+
       width: 300px;
       height: auto;
     }
