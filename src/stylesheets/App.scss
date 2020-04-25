@@ -147,4 +147,26 @@
 }
 
 @media all and (max-width: 320px) {
+  .body {
+    margin: 5px;
+  }
+  .header {
+    flex-direction: column;
+    &--logo {
+      width: 200px;
+      height: auto;
+      margin-bottom: 50px;
+      margin-top: -10px;
+    }
+    &--form {
+      font-size: 20px;
+    }
+  }
+  .list {
+    grid-template-columns: 1fr;
+    margin-right: 10px;
+  }
+  .detailCard {
+    left: 5%;
+  }
 }
