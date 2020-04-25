@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import Logo from '../stylesheets/images/rickandmorty.png';
 
 const FilterByName = (props) => {
-  console.log(props);
-
   const handleFilter = (ev) => {
     props.handleFilter({
       value: ev.target.value,
@@ -13,7 +11,6 @@ const FilterByName = (props) => {
   const handleForm = (ev) => {
     ev.preventDefault();
   };
-
   return (
     <header className='header'>
       <div>

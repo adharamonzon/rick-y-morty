@@ -3,11 +3,6 @@ import CharacterCard from './CharacterCard';
 import PropTypes from 'prop-types';
 
 const CharacterList = (props) => {
-  console.log(props.characters);
-
-  /*  const alphabetically = props.characters.name.sort((a, b) => {
-    a < b ? 1 : -1;
-  }); */
   if (props.characters.length > 0) {
     const items = props.characters.map((item) => {
       return (
@@ -16,7 +11,6 @@ const CharacterList = (props) => {
         </li>
       );
     });
-
     return <ul className='list'>{items}</ul>;
   } else {
     return (

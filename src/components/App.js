@@ -17,6 +17,7 @@ class App extends React.Component {
     this.handleFilter = this.handleFilter.bind(this);
     this.filteredCharacters = this.filteredCharacters.bind(this);
     this.renderCharacterDetail = this.renderCharacterDetail.bind(this);
+    this.renderAlphabetically = this.renderAlphabetically.bind(this);
   }
 
   //traer los datos de la api
@@ -51,15 +52,19 @@ class App extends React.Component {
     }
   }
 
-  render() {
-    console.log(this.state);
+  renderAlphabetically() {
+    return this.state.characters.sort((a, b) => {
+      return a.name > b.name ? 1 : -1;
+    });
+  }
 
+  render() {
     return (
       <div>
         <Switch>
           <Route exact path='/'>
             <FilterByName handleFilter={this.handleFilter} inputValue={this.state.nameFilter} />
-            <CharacterList characters={this.filteredCharacters()} inputValue={this.state.nameFilter} />
+            <CharacterList characters={this.filteredCharacters()} sort={this.renderAlphabetically()} inputValue={this.state.nameFilter} />
           </Route>
           <Route path='/character/:id' render={this.renderCharacterDetail} />
         </Switch>
