@@ -1,4 +1,5 @@
 .header {
+  color: rgb(107, 236, 107);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,27 +37,27 @@
     margin-bottom: 30px;
     display: flex;
     flex-direction: column-reverse;
+    border: solid rgb(107, 236, 107) 8px;
+    border-radius: 10px;
     .title {
       font-size: 25px;
       padding-bottom: 10px;
       padding-top: 7px;
-      color: black;
+      color: white;
     }
     .espices {
-      color: black;
+      color: rgb(107, 236, 107);
       padding-bottom: 10px;
     }
     .text-container {
       padding-top: 15px;
-      background-color: #a2aeb1;
-      border-radius: 8px;
+      background-color: rgb(25, 54, 71);
       margin-top: -15px;
+      margin-bottom: -1px;
       height: 120px;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
     }
     .imgCard {
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
       height: auto;
     }
     .link {
@@ -64,7 +65,17 @@
     }
   }
 }
-
+.detail {
+  height: 100vh;
+  width: 90vw;
+  &--img-container {
+    margin: 50px;
+    width: 200px;
+  }
+  &--image {
+    width: 100%;
+  }
+}
 .detailCard {
   width: 500px;
   position: absolute;
@@ -74,9 +85,9 @@
   flex-direction: column;
   align-items: center;
   &--back {
-    border-radius: 20px;
+    border-radius: 10px;
     border: solid 3px rgb(107, 236, 107);
-    color: black;
+    color: rgb(107, 236, 107);
     width: 75px;
     height: 45px;
     text-decoration: none;
@@ -91,18 +102,25 @@
     }
   }
   &--img {
-    border-radius: 8px;
+    border: rgb(107, 236, 107) solid 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
   }
   &--textContainer {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
     font-size: 14px;
     margin-top: 20px;
-    background-color: #a2aeb1;
+    background-color: rgb(25, 54, 71);
     width: 300px;
-    margin-top: -5px;
+    margin-top: -8px;
     padding-top: 15px;
+    padding-left: 5px;
+    width: 317px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+    border: solid 8px rgb(107, 236, 107);
+    color: white;
+    border-top: none;
     text-align: center;
     &__espices {
       margin-bottom: 8px;
@@ -122,16 +140,16 @@
   width: 25px;
   height: 25px;
   position: absolute;
-  bottom: 80px;
+  bottom: 90px;
 }
 .icon-dead {
   width: 25px;
   height: 25px;
   position: absolute;
-  bottom: 33px;
+  bottom: 40px;
 }
 .alive {
-  color: rgb(45, 156, 45);
+  color: rgb(107, 236, 107);
   font-weight: 700;
 }
 

@@ -20,7 +20,7 @@ class App extends React.Component {
     this.renderAlphabetically = this.renderAlphabetically.bind(this);
   }
 
-  //traer los datos de la api
+  //trae los datos de la api (datos ya limpios)
   getDataFromApi() {
     getDataFromApi().then((data) => {
       this.setState({
@@ -32,17 +32,17 @@ class App extends React.Component {
     this.getDataFromApi();
   }
 
-  //manejar el filtro
+  //manejar el filtro por nombre
   handleFilter(data) {
     this.setState({ nameFilter: data.value });
   }
 
   filteredCharacters() {
     return this.state.characters.filter((character) => {
-      return character.name.toUpperCase().includes(this.state.nameFilter.toLocaleUpperCase());
+      return character.name.toUpperCase().includes(this.state.nameFilter.toUpperCase());
     });
   }
-
+  //pintar el detalle del personaje clicado
   renderCharacterDetail(props) {
     let selectedCharacter = this.state.characters.find((character) => {
       return character.id === parseInt(props.match.params.id);
@@ -51,7 +51,7 @@ class App extends React.Component {
       return <CharacterDetail selectedCharacter={selectedCharacter} inputValue={this.state.nameFilter} />;
     }
   }
-
+  //pintar alfabéticamente (al hacer una búsqueda)
   renderAlphabetically() {
     return this.state.characters.sort((a, b) => {
       return a.name > b.name ? 1 : -1;
