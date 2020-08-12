@@ -1,68 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# APP Rick & Morty
 
-## Available Scripts
+# Este es el resultado!💥
 
-In the project directory, you can run:
+https://adharamonzon.github.io/pokedex/
+![Imagen del Buscador de series](./src/stylesheets/images/landing.png)
 
-### `npm start`
+## Objetivo 🎯
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Este ejercicio es de la evaluación final del módulo de React, el **objetivo** es crear una aplicación de diseño responsive, donde aparezcan todos los personajes de la serie _rick y morty_. Esta app se creará a través de React.js y para obtener los datos se hará una petición a una api. La aplicación tendrá una lista de personajes, donde se podrá filtrar por nombre y si se selecciona algún personaje saldrá información adicional.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Tecnologías utilizadas 💻
 
-### `npm test`
+### CSS3 ✔
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para los estilos de la página web se ha utilizado CSS.
 
-### `npm run build`
+### JavaScript / React ✔
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+El **HMTL** se creará a traves de **JSX** para una mayor rapidez y eficacia de la página. A traves de React se creará toda la funcional de la aplicación. Para cada ventana se usara _react-router-dom_ tanto para la lista de los personajes como para el detalle de cada uno de ellos, de esta manera será commpartible la url.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Instalación del proyecto 🚀
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Puedes clonarte el repositorio a través de este enlace, poniendo en la consola: **git clone https://github.com/adharamonzon/rick---morty.git** y abrir el servidor **npm start**.
